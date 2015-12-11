@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">NowCast</string>
+
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_moment_list">NowCast</string>
+    <string name="title_activity_new_moment">NewMoment</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="action_favorite">Favorites</string>
+    <string name="action_new">Add a Moment</string>
+    <string name="menu_title">My Moments</string>
+    <string name="meal_label">Add a Moment</string>
+    <string name="save_button_text">Save</string>
+    <string name="cancel_button_text">Cancel</string>
+
+    <string-array name="ratings_array">
+        <item>5</item>
+        <item>4</item>
+        <item>3</item>
+        <item>2</item>
+        <item>1</item>
+    </string-array>
+</resources>

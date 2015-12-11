@@ -22,22 +22,16 @@ public class MomentListActivity extends ListActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //<felipe>
-
         setContentView(R.layout.activity_new_moment);
 
-        //</felipe.
-
-        getListView().setClickable(false);
+        getListView().setClickable(true);
 
         mainAdapter = new ParseQueryAdapter<Moment>(this, Moment.class);
         mainAdapter.setTextKey("title");
         mainAdapter.setImageKey("photo");
 
-        // Subclass of ParseQueryAdapter
         favoritesAdapter = new FavoriteMomentAdapter(this);
 
-        // Default view is all moments
         setListAdapter(mainAdapter);
     }
 
@@ -47,10 +41,6 @@ public class MomentListActivity extends ListActivity {
         return true;
     }
 
-    /*
-     * Posting moments and refreshing the list will be controlled from the Action
-     * Bar.
-     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -91,8 +81,6 @@ public class MomentListActivity extends ListActivity {
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode == Activity.RESULT_OK) {
-            // If a new post has been added, update
-            // the list of posts
             updateMomentList();
         }
     }

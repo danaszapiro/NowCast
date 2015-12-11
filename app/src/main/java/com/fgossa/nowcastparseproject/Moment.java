@@ -9,17 +9,10 @@ import com.parse.ParseFile;
 import com.parse.ParseObject;
 import com.parse.ParseUser;
 
-/*
- * An extension of ParseObject that makes
- * it more convenient to access information
- * about a given Meal
- */
-
 @ParseClassName("Moment")
 public class Moment extends ParseObject {
 
     public Moment() {
-        // A default constructor is required.
     }
 
     public String getTitle() {

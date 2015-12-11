@@ -18,22 +18,13 @@ import com.parse.ParseImageView;
 import com.parse.ParseQuery;
 import com.parse.ParseQueryAdapter;
 
-/*
- * The FavoriteMomentAdapter is an extension of ParseQueryAdapter
- * that has a custom layout for favorite moments, including a
- * bigger preview image, the moment's rating, and a "favorite"
- * star.
- */
-
 public class FavoriteMomentAdapter extends ParseQueryAdapter<Moment> {
 
     public FavoriteMomentAdapter(Context context) {
         super(context, new ParseQueryAdapter.QueryFactory<Moment>() {
             public ParseQuery<Moment> create() {
-                // Here we can configure a ParseQuery to display
-                // only top-rated moments.
                 ParseQuery query = new ParseQuery("Moment");
-                query.whereContainedIn("rating", Arrays.asList("5", "4"));
+                query.whereContainedIn("rating", Arrays.asList("Public"));
                 query.orderByDescending("rating");
                 return query;
             }
@@ -56,7 +47,6 @@ public class FavoriteMomentAdapter extends ParseQueryAdapter<Moment> {
             momentImage.loadInBackground(new GetDataCallback() {
                 @Override
                 public void done(byte[] data, ParseException e) {
-                    // nothing to do
                 }
             });
         }

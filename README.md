@@ -12,3 +12,4 @@ When you open the app all the events listed that have been successfully uploded 
 	
 ###Instructions on running NowCast:
 Download all the files and compile on the latest version of Android Studio.
+You can view the presentation documenrs in the Documents folder on this repository.
